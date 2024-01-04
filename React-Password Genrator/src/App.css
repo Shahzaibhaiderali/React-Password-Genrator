@@ -1,0 +1,169 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #cbeef7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.card-container {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(203, 238, 247);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+  box-shadow: 0 0 30px rgb(222, 33, 33);
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color:#000000ff;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color:#000000ff;
+  border-bottom: 8px solid #006b4dff;
+  border-radius: 5px;
+  font-family:sans-serif;
+}
+button {
+  background-color: #ffffffff; /* White background */
+  color: #de2121ff; /* Red text */
+  padding: 10px 16px;
+  padding-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: auto;
+}
+
+button:hover {
+  background-color: #de2121ff; /* Red background on hover */
+  color: #ffffffff; /* White text on hover */
+  transform: scale(1.05);
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #000000ff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #de2121ff; /* Use a solid color instead of a linear gradient */
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #de2121ff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: #fff;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #de2121ff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background-color: #fff;
+}
+
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  appearance: none;
+  height: 24px;
+  color: #de2121ff;
+  /* Increased checkbox size */
+  width: 26px;
+  border: 2px solid #de2121ff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #de2121ff;
+  border-color: #de2121ff;
+}
+
+input[type="checkbox"]::before {
+  content: '\2713';
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Added animation for checkboxes */
+input[type="checkbox"]:checked {
+  background-color: #de2121ff;
+  border-color: #de2121ff;
+  animation: checkboxFade 0.3s ease;
+}
+
+@keyframes checkboxFade {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #de2121ff;
+  }
+}
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .card-container {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Adjusted font size for smaller screens */
+  }
+
+  h3 {
+    font-size: 1.3em; /* Adjusted font size for smaller screens */
+  }
+
+  label {
+    font-size: 1.1em; /* Adjusted font size for smaller screens */
+  }
+}
