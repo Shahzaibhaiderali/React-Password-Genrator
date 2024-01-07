@@ -16,10 +16,6 @@ function App() {
     generatePassword();
   }, [length, numbers, symbols, uppercase, lowercase]);
 
-  useEffect(() => {
-    copyToClipboard();
-  }, [password]);
-
   function includeNumbers(e) {
     setNumbers(e.target.checked);
   }
